@@ -21,7 +21,7 @@ let rec seq (lst : TagSeq) : TagSeq =
     match lst with
     | [] -> []
     | (_, 0) :: xs -> seq xs
-    | (Tag.Max, n1) :: (Tag.Max, n2) :: xs -> seq ((Tag.Max, max n1 n2) :: seq xs)
+    | (Tag.Max, n1) :: (Tag.Max, n2) :: xs -> seq ((Tag.Max, max n1 n2) :: xs)
     | (Tag.Minus, n1) :: (Tag.Minus, n2) :: xs -> seq ((Tag.Minus, n1 + n2) :: xs)
     | (Tag.Plus, n1) :: (Tag.Minus, n2) :: xs -> seq ((Tag.Max, n1) :: (Tag.Minus, n2 - 1) :: xs)
     | (Tag.Plus, n1) :: (Tag.Max, n) :: (Tag.Minus, n2) :: xs -> seq ((Tag.Max, n1 + n) :: (Tag.Minus, n2 - 1) :: xs)
@@ -49,7 +49,7 @@ let rec merge (lst1 : TagSeq) (lst2 : TagSeq) : TagSeq =
             (Tag.Join, (snd (List.head lst1)) + (snd (List.head lst2))) :: (merge (List.tail lst1) (List.tail lst2))
         elif tag1 = Tag.Max && tag2 = Tag.Join then (Tag.Max, snd (List.head lst1)) :: (merge (List.tail lst1) lst2)
         elif tag1 = Tag.Join && tag2 = Tag.Max then (Tag.Max, snd (List.head lst2)) :: (merge lst1 (List.tail lst2))
-        else failwith "ERROR: in merge"
+        else failwith "ERROR in merge"
 
 // Define joint commit function
 let rec jc (lst1 : TagSeq) (lst2 : TagSeq) : TagSeq = 
@@ -62,15 +62,15 @@ let rec jc (lst1 : TagSeq) (lst2 : TagSeq) : TagSeq =
         | (Tag.Max, l') :: (Tag.Join, l) :: xs2 -> 
             jc (seq (List.append (List.rev xs1) [ (Tag.Max, n + n') ])) (seq ((Tag.Max, l' + l * n) :: xs2))
         | (Tag.Join, l) :: xs2 -> jc lst1 ((Tag.Max, 0) :: lst2)
-        | otherwise -> failwith "ERROR: in jc 1."
+        | otherwise -> failwith "ERROR jc 1: mismatch."
     | (Tag.Plus, n) :: xs1 -> jc (List.append lst1 [ (Tag.Max, 0) ]) lst2
     | (Tag.Max, n') :: [] -> 
         match lst2 with
         | [] -> lst1
         | (Tag.Max, l') :: xs2 -> seq ((Tag.Max, max n' l') :: xs2)
         | (Tag.Join, l) :: xs2 -> seq ((Tag.Max, n') :: lst2)
-        | otherwise -> failwith "ERROR in jc 2."
-    | otherwise -> failwith "ERROR: jc 3."
+        | otherwise -> failwith "ERROR jc 2: mismatch."
+    | otherwise -> failwith "ERROR jc 3."
 
 // Define choice function
 let choice (lst1 : TagSeq) (lst2 : TagSeq) : TagSeq = 

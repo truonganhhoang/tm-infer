@@ -34,3 +34,15 @@ C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tfj-infer-master\ConsoleApplicati
 C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tfj-infer-master\ConsoleApplication\bin\Debug\nunit.framework.dll
 C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tfj-infer-master\ConsoleApplication\bin\Debug\FSharp.Core.xml
 C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tfj-infer-master\ConsoleApplication\bin\Debug\nunit.framework.xml
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\bin\Debug\ConsoleApplication2.exe.config
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\bin\Debug\ConsoleApplication2.XML
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\bin\Debug\ConsoleApplication2.exe
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\bin\Debug\ConsoleApplication2.pdb
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\bin\Debug\FSharp.Core.dll
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\bin\Debug\FsUnit.NUnit.dll
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\bin\Debug\nunit.framework.dll
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\bin\Debug\FSharp.Core.xml
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\bin\Debug\nunit.framework.xml
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\obj\Debug\tfj-infer.fsprojResolveAssemblyReference.cache
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\obj\Debug\ConsoleApplication2.exe
+C:\Users\truon\Dropbox\2014-Nafosted\ictac2016\tm-infer\ConsoleApplication\obj\Debug\ConsoleApplication2.pdb
